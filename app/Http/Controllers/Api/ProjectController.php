@@ -9,6 +9,14 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
-    
 
-}
+    public function projectIndex() {
+
+        $projects = Project :: with('technologies') -> paginate(10);
+
+        return response() -> json([
+            'projects' => $projects
+        ]);
+    }
+} 
+
