@@ -18,5 +18,14 @@ class ProjectController extends Controller
             'projects' => $projects
         ]);
     }
-} 
+
+    public function projectIndexPage() {
+    
+        $projects = Project :: paginate(10);
+    
+        return response()->json([
+            'projects' => $projects
+        ]);
+}
+}
 

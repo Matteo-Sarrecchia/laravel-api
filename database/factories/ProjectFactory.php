@@ -22,7 +22,7 @@ class ProjectFactory extends Factory
             'people'=> fake() -> numberBetween(1, 100),
             'date_start'=> fake() -> date(),
             'duration'=> fake() -> numberBetween(1, 1000),
-            'description'=> fake() -> paragraphs(5, true)
+            'description'=> fake() -> paragraphs(2, true)
         ];
     }
 }
